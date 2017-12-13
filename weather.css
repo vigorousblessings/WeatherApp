@@ -1,0 +1,32 @@
+body{
+                    background:#f4f4f4;
+                    font-family: Arial;
+                    font-size: 14px;
+                    color:#666;             
+                }
+                
+				.btn-primary {
+					background: #0099cc;
+					color: #ffffff;
+				}
+                
+                #container{
+                    width: 800px;
+                    margin: auto;
+                    overflow: auto;
+                    background: #fff;
+                    padding: 15px;
+                }
+				.content{
+					font-family:Abel;
+					font-size:15px;
+				}
+				.righto{
+					text-align: right;
+				}
+				
+				#switchTemp:hover, #get-location:hover{ 
+					font-weight: bold;
+					background-color:#0BB5FF;
+                    border-color:#0BB5FF;
+};

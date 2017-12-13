@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VG's Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="weather.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id='container-fluid' style='font-family:Tangerine; font-size:48px'>
+        <h1 id="rqmheader" style="font-weight:bold;text-align:center"><u>Weather App</u></h1>
+        <div id='container-fluid' class="">
+          <div class='row' style='margin:0px 200px; background-color:#f4f4f4'>
+            <div class='col-xx-10 col-xx-offset-2'>
+              <div class="content" style="text-align:left; padding-left:30px"> <i class="fa fa-quote-left" aria-hidden="true"></i><br>
+                <span class="col-sm-6 righto">Name : </span><span class="col-sm-6" id='name'></span><br>
+                <span class="col-sm-6 righto">Region : </span><span class="col-sm-6" id='region'></span><br>
+                <span class="col-sm-6 righto">Country : </span><span class="col-sm-6" id='country'></span><br>
+                <span class="col-sm-6 righto">Timezone : </span><span class="col-sm-6" id='timezone'></span><br>
+                <span class="col-sm-6 righto">Latitude : </span><span class="col-sm-6" id='lat'></span><br>
+                <span class="col-sm-6 righto">Longitude : </span><span class="col-sm-6" id='lon'></span><br>
+                <span class="col-sm-6 righto">Local Time : </span><span class="col-sm-6" id='localtime'></span><br>
+                <span class="col-sm-6 righto">Weather Description : </span><span class="col-sm-6" id='text'></span><br>
+                <span class="col-sm-6 righto">Weather Image : </span><span class="col-sm-6" id='icon'></span><br>
+                <span class="col-sm-6 righto">Wind Speed (mph) : </span><span class="col-sm-6" id='wind_mph'></span><br>
+                <span class="col-sm-6 righto">Wind Speed (kph) : </span><span class="col-sm-6" id='wind_kph'></span><br>
+                <span class="col-sm-6 righto">Wind Degree : </span><span class="col-sm-6" id='wind_degree'></span><br>
+                <span class="col-sm-6 righto">Wind Direction : </span><span class="col-sm-6" id='wind_dir'></span><br>
+                <span class="col-sm-6 righto">Wind Pressure (mb) : </span><span class="col-sm-6" id='pressure_mb'></span><br>
+                <span class="col-sm-6 righto">Wind Pressure (in) : </span><span class="col-sm-6" id='pressure_in'></span><br>
+                <div id="tempCel"><span class="col-sm-6 righto">Temperature in Celsius : </span><span class="col-sm-6" id='temp_c'></span><br></div>
+                <div id="tempFah"><span class="col-sm-6 righto">Temperature in Fahrenheit : </span><span class="col-sm-6" id='temp_f'></span><br></div>
+                <!--span class="col-sm-6 righto">Precipitation (mm) : </span><span class="col-sm-6" id='precip_mm'></span><br>
+                                  <span class="col-sm-6 righto">Precipitation (in) : </span><span class="col-sm-6" id='precip_in'></span><br>
+                                  <span class="col-sm-6 righto">Humidity : </span><span class="col-sm-6" id='humidity'></span><br>
+                                  <span class="col-sm-6 righto">Cloud : </span><span class="col-sm-6" id='cloud'></span><br>
+                                  <span class="col-sm-6 righto">Feelslike (celsius) : </span><span class="col-sm-6" id='feelslike_c'></span><br>
+                                  <span class="col-sm-6 righto">Feelslike (farenheit) : </span><span class="col-sm-6" id='feelslike_f'></span><br>
+                                  <span class="col-sm-6 righto">Visibility (km) : </span><span class="col-sm-6" id='vis_km'></span><br>
+                                  <span class="col-sm-6 righto">Visibility (miles) : </span><span class="col-sm-6" id='vis_miles'></span><br-->
+      
+                <footer style="text-align:right"> <cite><span id = 'quoteBy' style='font-family:"Gloria Hallelujah"'> </span></cite></footer>
+                <!--p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p-->
+              </div>
+              <div style='padding: 0px 20px; margin: 0px;'>
+      
+                <div class="row">
+                  <div class="col-sm-8">
+                    <button id="switchTemp" class="btn btn-md pull-left" style='font-family:Abel; background-color:black; color:white; font-size:15px; font-weight: bold; margin:7px; height:46px;'>Switch Temperature</button>
+                  </div>
+                  <div class="col-sm-4">
+                    <button id="get-location" class="btn btn-md pull-right" style='font-family:Abel; background-color:black; color:white; font-size:15px; font-weight: bold; margin:7px; height:46px;'>Get Weather Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+        <p style='font-family:Abel; text-align:center; font-size:15px; font-weight:bold'>by VigorousBlessings</p>
+      </div>
+      
+      <p id='out1'></p>
+      <ul id='results'> </ul>
+      </div>
+      
+      <div id='box'></div>
+      <script src="weather.js"></script>
+</body>
+</html>
